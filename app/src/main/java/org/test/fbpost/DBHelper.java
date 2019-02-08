@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
-    static final String DATABASE_NAME = "test.db";
+    static final String DATABASE_NAME = "memo.db";
     static final int DATABASE_VERSION = 1;
 
     public DBHelper(Context context) {
@@ -14,7 +14,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS tableName (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS tableName (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT, created_date INTEGER);");
     }
 
     @Override
